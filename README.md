@@ -76,9 +76,9 @@ cf push
 Live Backend URL: https://sahil-p2p-backend-mediating-panda-io.cfapps.ap21.hana.ondemand.com/api/inventory/materials
 
 Method,Endpoint,Description
-GET,/api/inventory/materials,Fetch all current material stock levels.
-GET,/api/inventory/low-stock,Retrieve items currently below the safety threshold.
-POST,/api/inventory/requisition,Generate a new Purchase Requisition (P2P Flow).
+GET |,/api/inventory/materials,|Fetch all current material stock levels.
+GET |,/api/inventory/low-stock, |Retrieve items currently below the safety threshold.
+POST|,/api/inventory/requisition,|Generate a new Purchase Requisition (P2P Flow).
 
 
 
