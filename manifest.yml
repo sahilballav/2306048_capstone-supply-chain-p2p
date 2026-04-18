@@ -1,0 +1,11 @@
+---
+applications:
+- name: sahil-p2p-backend
+  path: target/p2p-backend-0.0.1-SNAPSHOT.jar
+  memory: 1G
+  random-route: true
+  buildpacks:
+    - java_buildpack
+  env:
+    SPRING_PROFILES_ACTIVE: default
+    JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 21.+ } }'

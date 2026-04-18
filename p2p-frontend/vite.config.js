@@ -5,11 +5,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': {
-        target: 'https://port8080-workspaces-ws-270u1.ap21.trial.applicationstudio.cloud.sap',
-        changeOrigin: true,
-        secure: false,
-      }
+      // ... inside server.proxy
+'/api': {
+  target: 'https://sahil-p2p-backend-mediating-panda-io.cfapps.ap21.hana.ondemand.com',
+  changeOrigin: true,
+  secure: false,
+}
     }
   }
 })
