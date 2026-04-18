@@ -44,15 +44,3 @@ The project utilizes a decoupled, microservice-ready architecture to ensure scal
 └── pom.xml                 # Maven Dependency Management
 
 
-🚀 Installation & Setup1. PrerequisitesJava 25 or higherNode.js 18 or higherMaven 3.9+2. Run the Backend (Spring Boot)From the root directory, execute:Bashmvn spring-boot:run
-The server will start on port 8080. The H2 database will initialize and inject sample materials automatically.3. Run the Frontend (React)Open a new terminal, navigate to the frontend folder, and start the development server:Bashcd p2p-frontend
-npm install
-npm run dev
-The dashboard will be accessible via the provided Vite local/network URL (port 5173).🔗 API EndpointsMethodEndpointDescriptionGET/api/inventory/materialsFetch all current material stock levels.GET/api/inventory/low-stockRetrieve items below the safety threshold.POST/api/inventory/requisitionCreate a new Purchase Requisition (P2P).Note on Security: This project includes a pre-configured Vite Proxy to bypass CORS restrictions in cloud IDE environments like SAP Business Application Studio.Developed by: Sahil BallavInstitution: KIIT University | IT 04Project Type: 6th Semester CapstoneDate: April 2026
----
-
-### How to update your GitHub:
-1. In the terminal, run: `git add README.md`
-2. Run: `git commit -m "Add professional documentation for GitHub repository"`
-3. Run: `git push`
-
