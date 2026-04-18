@@ -21,3 +21,17 @@ This project utilizes a decoupled, microservice-ready architecture separating th
 Navigate to the root directory (`p2p-backend`) and run the Maven wrapper:
 ```bash
 mvn spring-boot:run
+
+
+2. Start the React Frontend
+Open a second terminal instance, navigate to the frontend directory, and start the Vite development server:
+
+Bash
+cd p2p-frontend
+npm install
+npm run dev
+The UI will initialize on http://localhost:5173.
+
+Developed by: Sahil Ballav
+Institution: KIIT University | 
+Project Type: 6th Semester Capstone
