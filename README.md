@@ -61,20 +61,30 @@ Bash
 mvn spring-boot:run
 The server will start on port 8080. The H2 database will initialize and inject sample materials automatically.
 
-3. Run the Frontend (React)Open a new terminal, navigate to the frontend folder, and start the development server:Bashcd p2p-frontend
+3. Run the Frontend (React)Open a new terminal, navigate to the frontend folder, and
+4. start the development server:Bash
+
+
+cd p2p-frontend
 npm install
 npm run dev
+
 The dashboard will be accessible via the provided Vite local/network URL (usually port 5173).
 
 ☁️ Cloud Deployment
 This project is configured for SAP BTP Cloud Foundry.Deployment 
 Command:Bash
+
 mvn clean package -DskipTests
 cf push
 
 Live Backend URL: https://sahil-p2p-backend-mediating-panda-io.cfapps.ap21.hana.ondemand.com/api/inventory/materials
 
-🔗 API EndpointsMethodEndpointDescriptionGET/api/inventory/materialsFetch all current material stock levels.GET/api/inventory/low-stockRetrieve items currently below the safety threshold.POST/api/inventory/requisitionGenerate a new Purchase Requisition (P2P Flow).
+🔗 API EndpointsMethodEndpointDescriptionGET/api/inventory/materialsFetch 
+all current material stock levels.GET/api/inventory/low-stockRetrieve 
+items currently below the safety 
+threshold.POST/api/inventory/requisitionGenerate 
+a new Purchase Requisition (P2P Flow).
 
 Developed by: Sahil Ballav
 
