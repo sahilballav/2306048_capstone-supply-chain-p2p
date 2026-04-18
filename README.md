@@ -46,50 +46,40 @@ The project utilizes a decoupled, microservice-ready architecture to ensure scal
 ```
 
 
-🚀 Installation & Setup
-1. Prerequisites
-Java 21 or higher
+## 🚀 Installation & Setup
 
-Node.js 18 or higher
+### 1. Prerequisites
+* **Java 21** or higher
+* **Node.js 18** or higher
+* **Maven 3.9+**
 
-Maven 3.9+
-
-2. Run the Backend (Spring Boot)
+### 2. Run the Backend (Spring Boot)
 From the root directory, execute:
-
-Bash
+```
 mvn spring-boot:run
-The server will start on port 8080. The H2 database will initialize and inject sample materials automatically.
+```
 
-3. Run the Frontend (React)Open a new terminal, navigate to the frontend folder, and
-4. start the development server:Bash
-
-
+### 3. Run the Frontend (React)
+Open a new terminal, navigate to the frontend folder, and start the development server:
+```
 cd p2p-frontend
 npm install
 npm run dev
-
-The dashboard will be accessible via the provided Vite local/network URL (usually port 5173).
-
-☁️ Cloud Deployment
-This project is configured for SAP BTP Cloud Foundry.Deployment 
-Command:Bash
-
+```
+## ☁️ Cloud Deployment
+This project is configured for SAP BTP Cloud Foundry.
+Deployment Command:
+```
 mvn clean package -DskipTests
 cf push
-
+```
 Live Backend URL: https://sahil-p2p-backend-mediating-panda-io.cfapps.ap21.hana.ondemand.com/api/inventory/materials
 
-🔗 API EndpointsMethodEndpointDescriptionGET/api/inventory/materialsFetch 
-all current material stock levels.GET/api/inventory/low-stockRetrieve 
-items currently below the safety 
-threshold.POST/api/inventory/requisitionGenerate 
-a new Purchase Requisition (P2P Flow).
+Method,Endpoint,Description
+GET,/api/inventory/materials,Fetch all current material stock levels.
+GET,/api/inventory/low-stock,Retrieve items currently below the safety threshold.
+POST,/api/inventory/requisition,Generate a new Purchase Requisition (P2P Flow).
 
-Developed by: Sahil Ballav
 
-Institution: KIIT University 
 
-Project Type: 6th Semester Capstone 
 
-ProjectDate: April 2026
