@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 1rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  color: #58a6ff;
+  margin-bottom: 0.5rem;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.inventory-card {
+  background-color: #161b22;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border-left: 5px solid;
+  transition: transform 0.2s;
+}
+
+.inventory-card:hover {
+  transform: translateY(-5px);
+}
+
+.healthy-stock {
+  border-left-color: #2ea043;
+}
+
+.critical-stock {
+  border-left-color: #f85149;
+  box-shadow: 0 0 15px rgba(248, 81, 73, 0.1);
+}
+
+.stock-details p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.action-area {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.warning-badge {
+  background-color: rgba(248, 81, 73, 0.1);
+  color: #f85149;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.reorder-btn {
+  background-color: #238636;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reorder-btn:hover {
+  background-color: #2ea043;
+}
