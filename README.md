@@ -23,7 +23,7 @@ Navigate to the root directory (`p2p-backend`) and run the Maven wrapper:
 mvn spring-boot:run
 
 
-2. Start the React Frontend
+### 2. Start the React Frontend
 Open a second terminal instance, navigate to the frontend directory, and start the Vite development server:
 
 Bash
