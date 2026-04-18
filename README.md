@@ -1,37 +1,58 @@
-# Smart Inventory & P2P Dashboard
-**Real-time SAP Material Management Extension**
+# 📦 Smart Inventory & P2P Dashboard
+### *Real-time SAP Material Management Extension*
 
-This enterprise-grade application simulates a modern Procure-to-Pay (P2P) lifecycle and smart inventory management system. It is designed to act as an extension to standard SAP ERP systems, providing real-time tracking, critical stock alerts, and automated purchase requisition generation.
+This enterprise-grade application simulates a modern **Procure-to-Pay (P2P)** lifecycle and smart inventory management system. It is designed to function as an extension to standard SAP ERP systems, providing real-time tracking, critical stock alerts, and automated purchase requisition generation to prevent supply chain bottlenecks.
+
+---
 
 ## 🏗️ System Architecture
-This project utilizes a decoupled, microservice-ready architecture separating the presentation layer from the business logic and data persistence layers.
-* **Frontend:** React.js (Vite), Axios for API communication, responsive CSS Grid.
-* **Backend:** Java, Spring Boot, Spring Web, Spring Data JPA.
-* **Database:** H2 In-Memory Database (configured for zero-setup, portable deployments).
+The project utilizes a decoupled, microservice-ready architecture to ensure scalability and high availability.
+
+* **Frontend:** React.js (Vite), Axios for API communication, Responsive CSS Grid, and dynamic state management.
+* **Backend:** Java 25, Spring Boot 4.x, Spring Web, Spring Data JPA.
+* **Data Layer:** H2 In-Memory Database for zero-setup portability and iterative development.
+* **API Protocol:** RESTful JSON Endpoints with CORS-enabled proxying for cloud environments.
+
+---
 
 ## ✨ Key Features
-* **Real-Time Dashboard:** Fetches and displays material stock levels dynamically.
-* **Threshold Monitoring:** Automatically flags inventory items (e.g., Sensor Arrays, Power Supply Units) when they fall below minimum operational thresholds.
-* **Automated Requisition:** 1-click trigger to generate a `PENDING_APPROVAL` Purchase Requisition payload, mimicking SAP MM standard flows.
-* **CORS & Proxy Configured:** Secure communication between disparate frontend and backend cloud ports.
 
-## 🚀 How to Run Locally
+* **Real-Time Inventory Monitoring:** Automatically fetches material stock levels from the backend and renders them in a high-readability dashboard.
+* **Smart Threshold Logic:** The system dynamically identifies "Critical Stock" items (e.g., Sensor Arrays, Power Units) using a comparative algorithm against pre-defined safety thresholds.
+* **Automated P2P Workflow:** Features a 1-click trigger to generate a `PENDING_APPROVAL` Purchase Requisition, simulating real-world SAP MM (Materials Management) workflows.
+* **Dark-Mode Enterprise UI:** A premium, scroll-driven UI designed for high-density information environments.
 
-### 1. Start the Spring Boot Backend
-Navigate to the root directory (`p2p-backend`) and run the Maven wrapper:
-```bash
-mvn spring-boot:run
+---
+
+## 📂 Project Structure
+
+```text
+2306048_capstone-supply-chain-p2p/
+├── p2p-frontend/           # React Application (Vite)
+│   ├── src/
+│   │   ├── App.jsx         # Dashboard Logic & API Calls
+│   │   └── App.css         # Enterprise Styling
+│   └── vite.config.js      # Proxy Configuration
+├── src/                    # Spring Boot Application
+│   ├── main/java/.../
+│   │   ├── model/          # Entity Definitions (Material, Requisition)
+│   │   ├── repository/     # JPA Data Access Layers
+│   │   └── controller/     # REST API Endpoints
+│   └── main/resources/
+│       ├── data.sql        # Automated Test Data Injection
+│       └── application.properties
+└── pom.xml                 # Maven Dependency Management
 
 
-### 2. Start the React Frontend
-Open a second terminal instance, navigate to the frontend directory, and start the Vite development server:
-
-Bash
-cd p2p-frontend
+🚀 Installation & Setup1. PrerequisitesJava 25 or higherNode.js 18 or higherMaven 3.9+2. Run the Backend (Spring Boot)From the root directory, execute:Bashmvn spring-boot:run
+The server will start on port 8080. The H2 database will initialize and inject sample materials automatically.3. Run the Frontend (React)Open a new terminal, navigate to the frontend folder, and start the development server:Bashcd p2p-frontend
 npm install
 npm run dev
-The UI will initialize on http://localhost:5173.
+The dashboard will be accessible via the provided Vite local/network URL (port 5173).🔗 API EndpointsMethodEndpointDescriptionGET/api/inventory/materialsFetch all current material stock levels.GET/api/inventory/low-stockRetrieve items below the safety threshold.POST/api/inventory/requisitionCreate a new Purchase Requisition (P2P).Note on Security: This project includes a pre-configured Vite Proxy to bypass CORS restrictions in cloud IDE environments like SAP Business Application Studio.Developed by: Sahil BallavInstitution: KIIT University | IT 04Project Type: 6th Semester CapstoneDate: April 2026
+---
 
-Developed by: Sahil Ballav
-Institution: KIIT University | 
-Project Type: 6th Semester Capstone
+### How to update your GitHub:
+1. In the terminal, run: `git add README.md`
+2. Run: `git commit -m "Add professional documentation for GitHub repository"`
+3. Run: `git push`
+
