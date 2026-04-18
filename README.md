@@ -77,6 +77,9 @@ Live Backend URL: https://sahil-p2p-backend-mediating-panda-io.cfapps.ap21.hana.
 🔗 API EndpointsMethodEndpointDescriptionGET/api/inventory/materialsFetch all current material stock levels.GET/api/inventory/low-stockRetrieve items currently below the safety threshold.POST/api/inventory/requisitionGenerate a new Purchase Requisition (P2P Flow).
 
 Developed by: Sahil Ballav
+
 Institution: KIIT University 
+
 Project Type: 6th Semester Capstone 
+
 ProjectDate: April 2026
